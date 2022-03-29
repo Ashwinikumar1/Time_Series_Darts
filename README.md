@@ -98,4 +98,24 @@ Few Trials which did not work are as follows :
   2. Ensembling Prophet with ExponentialSmoothing model and FFT() as they are second best model
   3. Ignoring the covid period
 
-The resulst of hyperparam are documented in this [csv]
+The results of hyperparam are documented in this [csv](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Hyperparam_tuning/req_ThunB2B_Sorter-hyperparms_tuning.csv)
+
+
+##### Hyperparam Tuning : req_ThunB2B_Sorter
+
+By hyperparameter tuning, we beat the benchmark model. Our model MAE is 4038 as compared to 4774 from benchmark Before hyperparam tuning it was around 6000. The best model is exponential smoothing. The Grid Search was done on following hyperparams:
+
+####   "trend" : {"values" :[ModelMode.ADDITIVE, ModelMode.MULTIPLICATIVE,ModelMode.NONE]},
+####  "damped" :{"values" : [True,False]},
+####   "seasonal":{"values":[SeasonalityMode.ADDITIVE, SeasonalityMode.MULTIPLICATIVE, SeasonalityMode.NONE]},
+####   "seasonal_periods" :{"values":[4,8,16,24,32,52,53,56,60,72]}
+
+Grid Search Resulted in best hyperparams as follows :
+
+ |trend| damped |	seasonal |	seasonal_periods |
+ |------| ------- | -------| ------ |
+ | ModelMode.ADDITIVE |	TRUE	| SeasonalityMode.ADDITIVE |	52 |
+
+The code used for hyperparam tuning is placed at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Codes/TimeSeries_Experimentation-Req_ThunB2c.ipynb)
+
+
