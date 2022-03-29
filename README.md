@@ -73,3 +73,29 @@ Complete output for this trial can be found at this [location](https://github.co
 
 Complete output for this trial can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2Cfiltered)
 
+
+### Objective 2 : For req_ThunB2B_Sorter & req_ThunB2C do hyperparameter tuning.
+
+##### Hyperparam Tuning : req_ThunB2B_Sorter
+
+After doing multiple trials and experimentation, we have been able to reach MAE of 35630 as compared to benchmark error of 33980. Before Tuning it was 38167.This has been achieved using Prophet model with below hyperparams. The Grid Search was done on following hyperparams:
+
+
+####       "seasonality_mode" : {"values":['additive','multiplicative']},
+####       "n_changepoints" : {"values" : [5,10,20,30,40,50,60,70,80]},
+####       "changepoint_range" : {"values" : [0.5,0.6,0.7,0.8,0.9]},
+####       "seasonality_prior_scale" : {"values" :[5,10,20,30,40,50]
+
+Grid Search Resulted in best hyperparams as follows :
+
+  |changepoint_range| n_changepoints |	seasonality_mode |	seasonality_prior_scale |
+  |------| ------- | -------| ------ |
+  | 0.8 |	30	| additive |	30 |
+ 
+Few Trials which did not work are as follows :
+
+  1. Interpolation of Covid 2020 when demand was very less with 2019 observations
+  2. Ensembling Prophet with ExponentialSmoothing model and FFT() as they are second best model
+  3. Ignoring the covid period
+
+The resulst of hyperparam are documented in this [csv]
