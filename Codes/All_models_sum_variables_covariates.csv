@@ -1,0 +1,25 @@
+,Model_Name,period,loss_without_covar,loss_benchmark,loss_with_covar,train_series,benchmark_series
+0,LinearRegression(n_jobs=-1),SO_QTY_20210315,23482.394772088588,73494.5,23347.539882938083,Sum_All_Variables,Sum_All_Variables_Benchmark
+1,LinearRegression(n_jobs=-1),SO_QTY_20210607,26744.588149788102,41794.666666666664,26737.68865174483,Sum_All_Variables,Sum_All_Variables_Benchmark
+2,LinearRegression(n_jobs=-1),SO_QTY_20210830,42084.51665463217,58756.5,41696.59676834417,Sum_All_Variables,Sum_All_Variables_Benchmark
+3,LinearRegression(n_jobs=-1),SO_QTY_20211122,30778.42169671614,48203.2,29069.329514491885,Sum_All_Variables,Sum_All_Variables_Benchmark
+4,"RandomForest(lags={'target': [-24, -23, -22, -21, -20, -19, -18, -17, -16, -15, -14, -13, -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1], 'past': [-6, -5, -4, -3, -2, -1]}, n_estimators=100, max_depth=None)",SO_QTY_20210315,37304.887586185,73494.5,37265.96738723134,Sum_All_Variables,Sum_All_Variables_Benchmark
+5,"RandomForest(lags={'target': [-24, -23, -22, -21, -20, -19, -18, -17, -16, -15, -14, -13, -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1], 'past': [-6, -5, -4, -3, -2, -1]}, n_estimators=100, max_depth=None)",SO_QTY_20210607,53048.77058894428,41794.666666666664,54403.47524590282,Sum_All_Variables,Sum_All_Variables_Benchmark
+6,"RandomForest(lags={'target': [-24, -23, -22, -21, -20, -19, -18, -17, -16, -15, -14, -13, -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1], 'past': [-6, -5, -4, -3, -2, -1]}, n_estimators=100, max_depth=None)",SO_QTY_20210830,95228.27593373117,58756.5,97509.16754769422,Sum_All_Variables,Sum_All_Variables_Benchmark
+7,"RandomForest(lags={'target': [-24, -23, -22, -21, -20, -19, -18, -17, -16, -15, -14, -13, -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1], 'past': [-6, -5, -4, -3, -2, -1]}, n_estimators=100, max_depth=None)",SO_QTY_20211122,92189.37465591461,48203.2,88316.19090197576,Sum_All_Variables,Sum_All_Variables_Benchmark
+8,<darts.models.forecasting.block_rnn_model.BlockRNNModel object at 0x0000016F674EBBC8>,SO_QTY_20210315,183724.3517429234,73494.5,183654.1730061183,Sum_All_Variables,Sum_All_Variables_Benchmark
+9,<darts.models.forecasting.block_rnn_model.BlockRNNModel object at 0x0000016F674EBBC8>,SO_QTY_20210607,160021.36860714387,41794.666666666664,159951.15778100406,Sum_All_Variables,Sum_All_Variables_Benchmark
+10,<darts.models.forecasting.block_rnn_model.BlockRNNModel object at 0x0000016F674EBBC8>,SO_QTY_20210830,249280.5331652499,58756.5,249210.31663828623,Sum_All_Variables,Sum_All_Variables_Benchmark
+11,<darts.models.forecasting.block_rnn_model.BlockRNNModel object at 0x0000016F674EBBC8>,SO_QTY_20211122,218586.8082635607,48203.2,218516.54486339694,Sum_All_Variables,Sum_All_Variables_Benchmark
+12,<darts.models.forecasting.tcn_model.TCNModel object at 0x0000016F67401548>,SO_QTY_20210315,54464.10958368741,73494.5,42427.512402844026,Sum_All_Variables,Sum_All_Variables_Benchmark
+13,<darts.models.forecasting.tcn_model.TCNModel object at 0x0000016F67401548>,SO_QTY_20210607,47941.325171928445,41794.666666666664,60461.039733316145,Sum_All_Variables,Sum_All_Variables_Benchmark
+14,<darts.models.forecasting.tcn_model.TCNModel object at 0x0000016F67401548>,SO_QTY_20210830,130264.78261124919,58756.5,133425.22037943374,Sum_All_Variables,Sum_All_Variables_Benchmark
+15,<darts.models.forecasting.tcn_model.TCNModel object at 0x0000016F67401548>,SO_QTY_20211122,91606.98994050769,48203.2,83487.63412953634,Sum_All_Variables,Sum_All_Variables_Benchmark
+16,<darts.models.forecasting.nbeats.NBEATSModel object at 0x0000016F1B532848>,SO_QTY_20210315,30325.72066105581,73494.5,26818.54827496041,Sum_All_Variables,Sum_All_Variables_Benchmark
+17,<darts.models.forecasting.nbeats.NBEATSModel object at 0x0000016F1B532848>,SO_QTY_20210607,113385.31367279228,41794.666666666664,29018.66242603902,Sum_All_Variables,Sum_All_Variables_Benchmark
+18,<darts.models.forecasting.nbeats.NBEATSModel object at 0x0000016F1B532848>,SO_QTY_20210830,153271.016265212,58756.5,138060.41131049197,Sum_All_Variables,Sum_All_Variables_Benchmark
+19,<darts.models.forecasting.nbeats.NBEATSModel object at 0x0000016F1B532848>,SO_QTY_20211122,104097.09957683738,48203.2,42380.915008125,Sum_All_Variables,Sum_All_Variables_Benchmark
+20,<darts.models.forecasting.transformer_model.TransformerModel object at 0x0000016F674EBF08>,SO_QTY_20210315,183546.52160032222,73494.5,180871.38366217128,Sum_All_Variables,Sum_All_Variables_Benchmark
+21,<darts.models.forecasting.transformer_model.TransformerModel object at 0x0000016F674EBF08>,SO_QTY_20210607,159443.27523240773,41794.666666666664,156036.62712851117,Sum_All_Variables,Sum_All_Variables_Benchmark
+22,<darts.models.forecasting.transformer_model.TransformerModel object at 0x0000016F674EBF08>,SO_QTY_20210830,248105.6833894667,58756.5,243975.99536681164,Sum_All_Variables,Sum_All_Variables_Benchmark
+23,<darts.models.forecasting.transformer_model.TransformerModel object at 0x0000016F674EBF08>,SO_QTY_20211122,216624.4439960223,48203.2,211777.54927583603,Sum_All_Variables,Sum_All_Variables_Benchmark

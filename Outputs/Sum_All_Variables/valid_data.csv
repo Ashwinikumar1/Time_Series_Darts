@@ -1,0 +1,2 @@
+,model,loss_benchmark,loss_model
+0,LinearRegression(n_jobs=-1),51986.81034482759,63894.3930197435

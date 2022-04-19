@@ -1,0 +1,5 @@
+,Model_Name,period,loss_without_covar,loss_benchmark,loss_with_future_covar,train_series,benchmark_series
+0,Prophet,SO_QTY_20210315,68429.02338781489,73494.5,73121.11017049853,Sum_All_Variables,Sum_All_Variables_Benchmark
+1,Prophet,SO_QTY_20210607,35509.85020850057,41794.666666666664,38324.984763329434,Sum_All_Variables,Sum_All_Variables_Benchmark
+2,Prophet,SO_QTY_20210830,58266.610035893835,58756.5,59155.08564305619,Sum_All_Variables,Sum_All_Variables_Benchmark
+3,Prophet,SO_QTY_20211122,49909.82160753429,48203.2,53955.31161131981,Sum_All_Variables,Sum_All_Variables_Benchmark

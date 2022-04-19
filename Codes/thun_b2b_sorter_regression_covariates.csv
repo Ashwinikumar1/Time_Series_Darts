@@ -1,0 +1,5 @@
+,Model_Name,period,loss_without_covar,loss_benchmark,loss_with_future_covar,train_series,benchmark_series
+0,LinearRegression(n_jobs=-1),SO_QTY_20210315,17687.015781742724,36163.0,17670.047752720508,Sum_All_Variables,Sum_All_Variables_Benchmark
+1,LinearRegression(n_jobs=-1),SO_QTY_20210607,77191.67729596708,23325.166666666668,51442.82852243112,Sum_All_Variables,Sum_All_Variables_Benchmark
+2,LinearRegression(n_jobs=-1),SO_QTY_20210830,35153.53961261811,52058.666666666664,34446.87178580664,Sum_All_Variables,Sum_All_Variables_Benchmark
+3,LinearRegression(n_jobs=-1),SO_QTY_20211122,45977.20939994553,29709.5,24620.744050336616,Sum_All_Variables,Sum_All_Variables_Benchmark

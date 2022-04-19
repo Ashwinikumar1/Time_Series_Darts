@@ -1,0 +1,5 @@
+,SO_QTY_20210315,,,SO_QTY_20210607,,,SO_QTY_20210830,,,SO_QTY_20211122,,
+Models,Model_Loss,Model_Loss_Covariates,loss_benchmark,Model_Loss,Model_Loss_Covariates,loss_benchmark,Model_Loss,Model_Loss_Covariates,loss_benchmark,Model_Loss,Model_Loss_Covariates,loss_benchmark
+LinearRegression,23459.3,23445.9,73494.5,26743.8,26737.6,41794.7,47783.2,47760.9,58756.5,30777.0,30787.3,48203.2
+RandomForest,31751.8,32917.1,73494.5,53241.2,54264.8,41794.7,89937.7,99691.6,58756.5,124473.5,128174.4,48203.2
+RNNModel ,183695.6,183733.2,73494.5,159992.9,160040.5,41794.7,249251.7,249313.6,58756.5,218554.1,218621.3,48203.2
