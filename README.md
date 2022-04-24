@@ -73,6 +73,16 @@ Complete output for this trial can be found at this [location](https://github.co
 
 Complete output for this trial can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2Cfiltered)
 
+##### 4. Sum of all variables: Prophet Model beats the benchmark model by a margin of 4k. All other models perform worse than the benchmark model
+
+|model |	loss_benchmark|	loss_model|Plot Models Prediction |
+|------| ------- | -------| ------ |
+|Prophet	| 51986 |	47985 | ![Prophet Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/Prophet.png)|
+|TCN Model |	51986 |	63071 |![TCN Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/TCNModel.png) |
+|N Beats Model |	51986 |	73559 |![N Beats Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/NBEATSModel.png) |
+
+Complete output for this trial can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2Cfiltered)
+
 
 ### Objective 2 : For req_ThunB2B_Sorter & req_ThunB2C do hyperparameter tuning.
 
