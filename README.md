@@ -24,9 +24,31 @@ these peaks while keeping the data as it is. Thus model performs better. The plo
 
 ![image](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Insights/filtered_data.PNG)
 
+## Summary Objective 1 : Best model summary of all variables
 
+Summary of all best performing models based on MAE & model learning from data is as follows :
 
-##### 1. req_ThunB2B_AA : Multiple Models are able to beat the benchmark model with comfortable margin. The list of models are as follows :
+| Variable Name |model |	loss_benchmark|	loss_model|Plot Models Prediction |
+|------|------| ------- | -------| ------ |
+| Sum of all variables(Total Thun) |Prophet	| 51986 |	47985 | ![Prophet Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/Prophet.png)|
+| req_ThunB2B_AA |Theta(2)|	23509.7	|16320.1| ![Theta Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2B_AAfiltered/Theta.png)|
+| req_ThunB2B_PP |NBEATSModel |	11758.0	 |11494.8 | ![N beats Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2B_PPfiltered/NBEATSModel.png) |
+| req_ThunB2B_Sorter |Prophet|	33980.2	|38167.9 |![Prophet Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2B_Sorterfiltered/Prophet.png) |
+| req_ThunB2C |Auto-ARIMA	| 4775 |	5456 | ![Arima Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2Cfiltered/AutoARIMA.png)|
+
+### Detailed Analysis for each Variable
+
+##### 1. Sum of all variables(Total Thun): Prophet Model beats the benchmark model by a margin of 4k. All other models perform worse than the benchmark model
+
+|model |	loss_benchmark|	loss_model|Plot Models Prediction |
+|------| ------- | -------| ------ |
+|Prophet	| 51986 |	47985 | ![Prophet Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/Prophet.png)|
+|TCN Model |	51986 |	63071 |![TCN Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/TCNModel.png) |
+|N Beats Model |	51986 |	73559 |![N Beats Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/NBEATSModel.png) |
+
+Complete output for this trial can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered)
+
+##### 2. req_ThunB2B_AA : Multiple Models are able to beat the benchmark model with comfortable margin. The list of models are as follows :
 
 |model| loss_benchmark |	loss_model | Plot Models Prediction |
 |------| ------- | -------| ------ |
@@ -36,11 +58,10 @@ these peaks while keeping the data as it is. Thus model performs better. The plo
 |NBEATSModel| 	23509.7|	18466.6| ![NBeats Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2B_AAfiltered/NBEATSModel.png)|
 |Prophet	|23509.7|	18683.2| ![Prophet Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2B_AAfiltered/Prophet.png) |
 
-
 But though many models beat the Time Series by comfortable margin, we should be looking at N beats Model as its curve looks best fit. Complete output for this trial
 can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2B_AAfiltered)
 
-##### 2. req_ThunB2B_PP : Only 4 models i.e. TCNModel,Theta,Auto-ARIMA and NBEATSModel beat the benchmark model.But if you look at the curve N beats model gives you the best curve.
+##### 3. req_ThunB2B_PP : Only 4 models i.e. TCNModel,Theta,Auto-ARIMA and NBEATSModel beat the benchmark model.But if you look at the curve N beats model gives you the best curve.
 
 |model |	loss_benchmark |	loss_model |Plot Models Prediction |
 |------| ------- | -------| ------ |
@@ -52,7 +73,7 @@ can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Dar
 But though many models beat the Time Series by comfortable margin, we should be looking at N beats Model as its curve looks best fit. Complete output for this trial
 can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2B_PPfiltered)
 
-##### 3. req_ThunB2B_Sorter : No Models beats the benchmark model. The best performing model is prophet which has MAE - 4k more than the benchmark. We will tune the parameters for this model
+##### 4. req_ThunB2B_Sorter : No Models beats the benchmark model. The best performing model is prophet which has MAE - 4k more than the benchmark. We will tune the parameters for this model
 
 |model |	loss_benchmark	|loss_model | Plot Models Prediction |
 |------| ------- | -------| ------ |
@@ -62,8 +83,7 @@ can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Dar
 
 Complete output for this trial can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2B_Sorterfiltered)
 
-
-##### 4. req_ThunB2C : No Models beats the benchmark model. The best performing model is prophet which has MAE - 4k more than the benchmark.
+##### 5. req_ThunB2C : No Models beats the benchmark model. The best performing model is prophet which has MAE - 4k more than the benchmark.
 
 |model |	loss_benchmark|	loss_model|Plot Models Prediction |
 |------| ------- | -------| ------ |
@@ -72,17 +92,6 @@ Complete output for this trial can be found at this [location](https://github.co
 |Prophet |	4775 |	6929 |![Prophet Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2Cfiltered/Prophet.png) |
 
 Complete output for this trial can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2Cfiltered)
-
-##### 4. Sum of all variables: Prophet Model beats the benchmark model by a margin of 4k. All other models perform worse than the benchmark model
-
-|model |	loss_benchmark|	loss_model|Plot Models Prediction |
-|------| ------- | -------| ------ |
-|Prophet	| 51986 |	47985 | ![Prophet Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/Prophet.png)|
-|TCN Model |	51986 |	63071 |![TCN Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/TCNModel.png) |
-|N Beats Model |	51986 |	73559 |![N Beats Plot](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Sum_All_Variablesfiltered/NBEATSModel.png) |
-
-Complete output for this trial can be found at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Outputs/Before_Filtering/req_ThunB2Cfiltered)
-
 
 ### Objective 2 : For req_ThunB2B_Sorter & req_ThunB2C do hyperparameter tuning.
 
