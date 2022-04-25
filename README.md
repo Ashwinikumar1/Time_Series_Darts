@@ -126,7 +126,7 @@ By hyperparameter tuning, we beat the benchmark model. Our model MAE is 4038 as 
 
 ####   "trend" : {"values" :[ModelMode.ADDITIVE, ModelMode.MULTIPLICATIVE,ModelMode.NONE]},
 ####  "damped" :{"values" : [True,False]},
-####   "seasonal":{"values":[SeasonalityMode.ADDITIVE, SeasonalityMode.MULTIPLICATIVE, SeasonalityMode.NONE]},
+####   "seasonal":{"values" :[SeasonalityMode.ADDITIVE, SeasonalityMode.MULTIPLICATIVE, SeasonalityMode.NONE]},
 ####   "seasonal_periods" :{"values":[4,8,16,24,32,52,53,56,60,72]}
 
 Grid Search Resulted in best hyperparams as follows :
@@ -137,4 +137,25 @@ Grid Search Resulted in best hyperparams as follows :
 
 The code used for hyperparam tuning is placed at this [location](https://github.com/Ashwinikumar1/Time_Series_Darts/blob/main/Codes/TimeSeries_Experimentation-Req_ThunB2c.ipynb)
 
+### Modelling Using Past Covariates
 
+After further analysis, we created new variables called Sales Order Quantity for 4 different periods. We will use these variables as Past Covariates and compare with model without past covariates to see if past covariates. 
+
+We created four different models and use it predict 4 different periods:
+
+| Variable Name | Start Date | End Date | # of Weeks |
+| -------| ------ | -------| ------ |
+| SO_QTY_20210315 | 2021-03-22 | 2021-06-07 | 12 |
+| SO_QTY_20210607 | 2021-06-14 | 2021-08-30 | 12 |
+| SO_QTY_20210830 | 2021-09-06 | 2021-11-22 | 12 |
+| SO_QTY_20211122 | 2021-11-29 | 2022-01-31 | 10 |
+
+|                  | SO\_QTY\_20210315 |                         |                 | SO\_QTY\_20210607 |                         |                 | SO\_QTY\_20210830 |                         |                 | SO\_QTY\_20211122 |                         |                 |
+| ---------------- | ----------------- | ----------------------- | --------------- | ----------------- | ----------------------- | --------------- | ----------------- | ----------------------- | --------------- | ----------------- | ----------------------- | --------------- |
+| Models           | Model\_Loss       | Model\_Loss\_Covariates | loss\_benchmark | Model\_Loss       | Model\_Loss\_Covariates | loss\_benchmark | Model\_Loss       | Model\_Loss\_Covariates | loss\_benchmark | Model\_Loss       | Model\_Loss\_Covariates | loss\_benchmark |
+| NBEATSModel      | 30325.7           | 26818.5                 | 73494.5         | 113385.3          | 29018.7                 | 41794.7         | 153271.0          | 138060.4                | 58756.5         | 104097.1          | 42380.9                 | 48203.2         |
+| BlockRNNModel    | 183724.4          | 183654.2                | 73494.5         | 160021.4          | 159951.2                | 41794.7         | 249280.5          | 249210.3                | 58756.5         | 218586.8          | 218516.5                | 48203.2         |
+| LinearRegression | 23482.4           | 23347.5                 | 73494.5         | 26744.6           | 26737.7                 | 41794.7         | 42084.5           | 41696.6                 | 58756.5         | 30778.4           | 29069.3                 | 48203.2         |
+| RandomForest     | 37304.9           | 37266.0                 | 73494.5         | 53048.8           | 54403.5                 | 41794.7         | 95228.3           | 97509.2                 | 58756.5         | 92189.4           | 88316.2                 | 48203.2         |
+| TCNModel         | 54464.1           | 42427.5                 | 73494.5         | 47941.3           | 60461.0                 | 41794.7         | 130264.8          | 133425.2                | 58756.5         | 91607.0           | 83487.6                 | 48203.2         |
+| TransformerModel | 183546.5          | 180871.4                | 73494.5         | 159443.3          | 156036.6                | 41794.7         | 248105.7          | 243976.0                | 58756.5         | 216624.4          | 211777.5                | 48203.2         |
